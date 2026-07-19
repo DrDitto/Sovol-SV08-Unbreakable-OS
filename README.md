@@ -1,4 +1,4 @@
-# 🎛️ Sovol-SV08-Unbreakable-OS v13.0
+# 🎛️ Sovol-SV08-Unbreakable-OS v1.0
 ### Architect & Author: DrDitto (c) 2026 🇨🇷
 
 ¡Pura vida, mae! Este es el cuartel general del ecosistema **Unbreakable-OS**, la distribución definitiva de nivel industrial para la impresora **Sovol SV08**. El sistema está diseñado bajo una arquitectura modular de desacoplamiento de hardware, garantizando un entorno veloz, robusto y 100% autogestionable.
