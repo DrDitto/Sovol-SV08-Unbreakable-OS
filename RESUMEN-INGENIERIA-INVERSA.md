@@ -4,7 +4,7 @@
 
 ---
 
-## 1. 🎯 Objetivo del Brete
+## 1. 🎯 Objetivo del Proyecto
 El ecosistema de fábrica de la Sovol SV08 amarra el sistema operativo (Armbian/Debian alternativo) directamente a las celdas físicas de la MicroSD lateral o una memoria eMMC interna pequeña [source: 1.4]. Esto genera dos problemas críticos de infraestructura:
 *   **Degradación del Silicio**: Klipper, Moonraker y las bases de datos temporales escriben logs de forma cíclica las 24 horas, quemando las celdas de la MicroSD en pocos meses [source: 1.4].
 *   **Cuello de Botella de E/S**: El bus de la MicroSD limita la tasa de transferencia, ralentizando la carga del entorno vivo [source: 1.4].
@@ -13,7 +13,7 @@ El ecosistema de fábrica de la Sovol SV08 amarra el sistema operativo (Armbian/
 
 ---
 
-## 2. 🔍 Proceso de Destripamiento Técnico
+## 2. 🔍 Proceso de Desacoplo Técnico
 
 Para lograr el desacoplamiento sin alterar físicamente la placa madre con el procesador Allwinner H616, se aplicó ingeniería inversa sobre el flujo de arranque de las distribuciones basadas en Armbian [source: 1.4]:
 
@@ -28,7 +28,7 @@ Para lograr el desacoplamiento sin alterar físicamente la placa madre con el pr
 
 ---
 
-## 3. 🛡️ Optimizaciones y Blindaje de Producción (v13.0)
+## 3. 🛡️ Optimizaciones y Blindaje de Producción (v1.0)
 
 Durante el **Umbreak-thón Sovolesco**, se cerraron las brechas lógicas del entorno vivo para elevar el sistema a un nivel industrial [source: 1.4]:
 
@@ -38,10 +38,9 @@ Durante el **Umbreak-thón Sovolesco**, se cerraron las brechas lógicas del ent
 
 ---
 
-## 4. 📦 El Hito del Empaquetado Pluma
+## 4. 📦 El Hito del Empaquetado Ultra Ligero
 El gran éxito comercial de esta ingeniería inversa radica en la simetría geométrica lograda en el taller local de Void Linux [source: 1.4]:
 *   Se talló un molde **GPT nativo de 2.5 GB** con la partición etiquetada formalmente como **`root`** y Volume Label **`ROOT-SV08`**, volviéndolo 100% amigable para **BalenaEtcher** y Rufus sin lanzar alertas [source: 1.4].
 *   El prensado extremo con `xz -9 -e` multinúcleo trituró el tamaño de la distribución, logrando meter el sistema operativo entero en apenas **681 MB** y la pista SlingShot en **105 MB**, listos para expandirse online al tamaño total del disco del usuario en su primera marcha física [source: 1.1.2, 1.4.1].
 
 ---
-¡Brete concluido con éxito rotundo. Distribución indestructible lista para despliegue masivo! 🇨🇷🚀
