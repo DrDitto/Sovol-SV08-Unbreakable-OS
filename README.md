@@ -63,13 +63,6 @@ Así es como fluyen los bits en el microsegundo en que encendés el interruptor 
 
 ---
 
-## 📂 Anatomía del Repositorio (`/home/manager/SV08-Unbreakable-OS/`)
-
-Para mantener el orden milimétrico y evitar despiches de archivos sueltos, la casa se divide en tres búnkers independientes:
-
-*   **`slingshoot/`**: El código fuente puro y limpio del cargador de arranque (`boot.cmd`, scripts y variables). Aquí es donde vive el motor del control de versiones.
-*   **`OS-Image/`**: El almacén exclusivo para las gemas comprimidas vistas para quemar en **BalenaEtcher** (`SV08-Unbreakable-OS.img.xz` de **681 MB** y la pista del SlingShot de **105 MB**).
-*   **`Documents/`**: La bitácora histórica, los registros de ingeniería y la justificación técnica de la deprecación de la eMMC.
 
 ---
 
