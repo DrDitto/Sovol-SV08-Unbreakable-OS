@@ -3,8 +3,19 @@
 ### Compatibilidad: Universal (Cualquier distribución de Linux o entorno gráfico)
 
 Este manual proporciona un procedimiento rápido de 5 pasos para activar la secuencia de arranque dual (**Cold-Boot**) en la impresora **Sovol SV08 MAX** utilizando una tarjeta MicroSD pasiva y una unidad USB principal [source: 5].
+Este manual proporciona el procedimiento directo de 4 pasos para grabar las imágenes y activar el arranque dual en la impresora **Sovol SV08 MAX** utilizando una tarjeta MicroSD (mínimo 1GB) y tu unidad USB principal (llave Netac).
+
+###########################################################################
+# ┌─────────────────────────────────────────────────────────────────────┐ #
+# │ ⚠️ NOTA PARA LOS SYSADMINS:                                          │ #
+# │ NO RECOMPILE EL boot.cmd BAJO NINGUNA RAZÓN LÓGICA QUE SE LE OCURRA. │ #
+# │ SLINGSHOT ES DEPENDIENTE DE LAS DEFINICIONES AQUÍ INCLUIDAS,        │ #
+# │ CAMBIAR ALGO PUEDE PROVOCAR UNA ROTURA DEL SISTEMA.                 │ #
+# └─────────────────────────────────────────────────────────────────────┘ #
+###########################################################################
 
 ---
+
 
 ## Paso 1: Grabar la imagen base de Slingshot en la MicroSD
 
