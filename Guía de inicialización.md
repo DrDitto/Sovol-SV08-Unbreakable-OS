@@ -62,24 +62,12 @@ Realiza el volcado en crudo del sistema operativo definitivo dentro de tu unidad
 
 ## Paso 4: Modificar el identificador de tu almacenamiento USB
 
-1. Abre la carpeta principal de la tarjeta MicroSD (donde grabaste Slingshot en el Paso 1) [source: 5].
-2. Abre el archivo de texto plano llamado **`armbianEnv.txt`** con cualquier editor de texto [source: 3, 5].
-3. Busca la línea que empieza con **`rootdev=`** y reemplaza el valor de fábrica por el identificador único (`UUID` o `PARTUUID`) de la partición del disco USB Netac que acabas de grabar en el Paso 3 [source: 3, 5]:
+1. Abre la carpeta principal de la tarjeta MicroSD
+2. Abre el archivo de texto plano llamado **`armbianEnv.txt`** con cualquier editor de text.
+3. Busca la línea que empieza con **`rootdev=`** y reemplaza el valor de fábrica por el identificador único (`UUID` o `PARTUUID`) de la partición del disco USB Netac que acabas de grabar en el Paso 3:
 
 ```text
 # Modifica estrictamente esta línea con el identificador único de tu unidad USB:
 rootdev=UUID=028f2806-d1cd-4aa4-abc4-79e4fe506a9d
 ```
-4. Guarda los cambios y cierra el archivo [source: 5].
-
----
-
-## Paso 5: Ejecutar el script de compilación automática
-
-Abre una terminal directamente dentro de la carpeta principal de tu tarjeta MicroSD y ejecuta el script automatizado como **`root`** (o usando `sudo`) para procesar y engranar el arranque en las pistas de la tarjeta [source: 5]:
-
-```bash
-sudo ./boot-adm
-```
-
-Una vez que la terminal te devuelva el reporte de confirmación en verde, la sincronización ha concluido con éxito [source: 5]. Extrae la MicroSD de tu computadora de forma segura, clávala en la ranura de tarjetas interna de la impresora, conecta tu unidad USB Netac recién grabada y enciende el interruptor general de la **Sovol SV08 MAX** [source: 5].
+4. Guarda los cambios y cierra el archivo.
