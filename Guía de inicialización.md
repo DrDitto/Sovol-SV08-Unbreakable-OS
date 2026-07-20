@@ -25,30 +25,7 @@ Debes volcar la imagen de arranque en bruto dentro de una tarjeta MicroSD físic
 
 ---
 
-## Paso 2: Instalar los programas necesarios en la computadora
-
-Si vas a usar la terminal para compilar, abre una consola en tu computadora de desarrollo e instala las herramientas esenciales de bajo nivel [source: 5]. Ejecuta **uno** de estos comandos según la distribución de Linux que utilices:
-
-*   **Ubuntu / Debian / Linux Mint / Pop!_OS**:
-    ```bash
-    sudo apt update && sudo apt install u-boot-tools grep sed coreutils
-    ```
-*   **Fedora / Red Hat / CentOS**:
-    ```bash
-    sudo dnf install u-boot-tools grep sed coreutils
-    ```
-*   **Arch Linux / Manjaro / EndeavourOS**:
-    ```bash
-    sudo pacman -Sy uboot-tools grep sed coreutils
-    ```
-*   **Void Linux**:
-    ```bash
-    sudo xbps-install -S u-boot-tools grep sed coreutils
-    ```
-
----
-
-## Paso 3: Grabar la imagen del Sistema Operativo en el disco USB
+## Paso 2: Grabar la imagen del Sistema Operativo en el disco USB
 
 Realiza el volcado en crudo del sistema operativo definitivo dentro de tu unidad USB principal (llave Netac de 7.5GB o superior) [source: 5]. Puedes hacerlo de dos maneras:
 
@@ -60,7 +37,7 @@ Realiza el volcado en crudo del sistema operativo definitivo dentro de tu unidad
 
 ---
 
-## Paso 4: Modificar el identificador de tu almacenamiento USB
+## Paso 3: Modificar el identificador de tu almacenamiento USB
 
 1. Abre la carpeta principal de la tarjeta MicroSD
 2. Abre el archivo de texto plano llamado **`armbianEnv.txt`** con cualquier editor de text.
