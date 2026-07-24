@@ -26,7 +26,7 @@ El sistema operativo se distribuye en dos archivos comprimidos al máximo median
 1. **Flashea el arranque**: Quema la imagen `SlingShot-ext4.img.xz` en tu tarjeta de memoria o almacenamiento interno.
 2. **Flashea el sistema**: Quema la imagen `Unbreakable-OS-ext4.img.xz` en tu disco o unidad externa.
 3. **Conecta los medios**: Introduce la tarjeta de memoria y conecta el disco externo en tu equipo o impresora Sovol.
-4. **Enciende el dispositivo**: El sistema operativo arrancará de forma inmediata. El núcleo auto-corregirá las cabeceras GPT de la tabla de particiones del disco externo en caliente y el entorno quedará 100% operativo.
+4. **Enciende el dispositivo**: El sistema operativo arrancará de forma inmediata. La tabla de particiones GPT del disco externo ya viene corregida y optimizada estructuralmente de fábrica, por lo que el entorno quedará 100% operativo al instante.
 
 ---
 
@@ -42,5 +42,6 @@ Olvídate de ejecutar scripts externos, descargas pesadas o comandos complejos e
 
 ## 📝 Notas de Versión
 
-* **Optimización Extext4**: El sistema de archivos raíz ha sido compactado y depurado de forma estricta a los primeros 7-8 GB para garantizar un despliegue seguro, previniendo corrupciones de datos en controladores de disco inestables.
+* **Estructura GPT Nativa**: Las cabeceras y tablas de particiones han sido fijadas y corregidas con precisión de ingeniería antes de su empaquetado, asegurando compatibilidad absoluta y arranque inmediato en cualquier unidad.
+* **Optimización Ext4**: El sistema de archivos raíz ha sido compactado y depurado de forma estricta a los primeros 7-8 GB para garantizar un despliegue seguro, previniendo corrupciones de datos en controladores de disco inestables.
 * **Plug and Play**: Klipper y los servicios de impresión asociados se encuentran pre-configurados para enlazarse de forma automática tras el primer encendido.
