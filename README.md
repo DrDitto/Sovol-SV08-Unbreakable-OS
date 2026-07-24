@@ -23,10 +23,15 @@ A través del combo tecnológico de **SlingShot** y el motor central nativo `unb
 Para erradicar la fricción y las experiencias frustrantes asociadas a instalaciones manuales complejas o dependencias rotas de Python 3.13 en Debian Trixie, el núcleo del sistema operativo unifica tres herramientas distintivas bajo el binario maestro `core`:
 
 ### 🧰 1. `printer-toolbox`
-Un asistente interactivo visual integrado directo en la terminal. El usuario final ya no tiene que buscar mapas de pines en foros de internet ni adivinar comandos complejos por SSH. Con solo escribir `core`, se despliega un panel de control interactivo para:
-*   Cargar perfiles de extrusión y calibración rápidos en un solo clic.
-*   Administrar servicios en caliente (Klipper, Moonraker, KlipperScreen, Crowsnest).
-*   Activar o suspender el módulo nativo de renderizado de video **Timelapse** (FFmpeg precargado).
+Un asistente interactivo visual integrado directo en la terminal. El usuario final ya no tiene que buscar actualizaciones al azar, el sistema busca tdos los dias si existem nuevos plug-ins, mejoras al sistema, en el horario que decida, un proceso automatico se conecta con nuestros servidores y descarga los paquetes de actualizacion. Distribuidos por ahora en el formato nativo de GNU Debian. Podras encontrarlos en la siguiente /srv/ota_updates/proposed /srv//ota_updates/applyed /srv//ota_updates/user_rejected. Usted decice entre las siguientes opciones:Automatic Update,Manual Updte., None.
+Automatic:
+    Defina la hora de aplicacion y todos los dias a la hora indicada loas actualizaciones seran apliacadas
+Manual:
+    simplemnete invoca check-updates y se desplegara una interfaz en formato Terminal User Interface(TUI) que mostrara Nombre del patch, breve descripcion.
+    NotaL todos los patch no son acumulativos, para aplicarlos debe tener aplicados los anteriores.
+None:
+    Libertad no aplicar
+    
 
 ### 🛡️ 2. `system-guard`
 Un demonio nativo de Systemd que se ejecuta en segundo plano durante la secuencia crítica del *boot*. Actúa como el cirujano digital del sistema: si la impresora es apagada de golpe a mitad de una tarea, `system-guard` interviene los descriptores de archivos, purga la caché corrupta de APT y libera los bloqueos del almacenamiento antes de dar luz verde al firmware.
