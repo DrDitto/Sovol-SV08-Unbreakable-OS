@@ -1,4 +1,4 @@
-# 🎛️ Sovol-SV08-Unbreakable-OS v1.0
+# 🎛️ Unbreakable-OS v3.0
 ### Architect & Author: DrDitto (c) 2026 🇨🇷
 
 ¡Pura vida, mae! Este es el cuartel general del ecosistema **Unbreakable-OS**, la distribución definitiva de nivel industrial para la impresora **Sovol SV08**. El sistema está diseñado bajo una arquitectura modular de desacoplamiento de hardware, garantizando un entorno veloz, robusto y 100% autogestionable.
@@ -50,7 +50,7 @@ Así es como fluyen los bits en el microsegundo en que encendés el interruptor 
 
  |            UNIDAD MASIVA SELECCIONADA (SSD / USB Industrial)      |
  |             Montaje atómico del sistema de archivos empresarial:       |
- |                    --> Volumen Raíz: /dev/sda1 [XFS]                  |
+ |                    --> Volumen Raíz: /dev/sda1 [ext4]                  |
  +-----------------------------------------------------------------------+
                                      |
                                      v
@@ -64,15 +64,6 @@ Así es como fluyen los bits en el microsegundo en que encendés el interruptor 
 ---
 
 
----
-
-## ⚙️ Inteligencia y Blindaje del Sistema
-
-1.  **RAM Virtual Autogestionable (`/tmp`)**: El demonio `unbreakable-tmp.service` calcula el espacio libre real de la partición XFS en cada arranque y estira automáticamente el `/tmp` en memoria RAM al **70% de la capacidad disponible** (653 GB flotantes al operar en el SSD de 1 TB).
-2.  **Búnker Seguro de Variables (`/etc/unbreakable.cfg`)**: La variable de infraestructura `${ROOTDEV}` está aislada y protegida bajo permisos **`640`** (lectura exclusiva para `root` y el grupo **`sudo`**), volviéndola invisible en texto plano para los usuarios comunes.
-3.  **Filtro Dinámico de Privilegios**: El inyector `/etc/profile.d/unbreakable-env.sh` verifica si el ID de la consola pertenece a la jerarquía de administradores antes de exponer las credenciales inalámbricas de red (`WIFI_SSID` y `WIFI_PASSWD`).
-
----
 
 ## 💎 Ventajas Técnicas de SlingShot Post-Arranque (Ciclo de Vida Pasivo)
 
