@@ -44,4 +44,3 @@ Olvídate de ejecutar scripts externos, descargas pesadas o comandos complejos e
 
 * **Estructura GPT Nativa**: Las cabeceras y tablas de particiones han sido fijadas y corregidas con precisión de ingeniería antes de su empaquetado, asegurando compatibilidad absoluta y arranque inmediato en cualquier unidad.
 * **Optimización Ext4**: El sistema de archivos raíz ha sido compactado y depurado de forma estricta a los primeros 7-8 GB para garantizar un despliegue seguro, previniendo corrupciones de datos en controladores de disco inestables.
-* **Plug and Play**: Klipper y los servicios de impresión asociados se encuentran pre-configurados para enlazarse de forma automática tras el primer encendido.
