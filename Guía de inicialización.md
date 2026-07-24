@@ -1,50 +1,46 @@
-# Guía de inicialización y configuración rápida de Slingshot
-### Sistema operativo: Sovol-SV08 Unbreakable OS v2.0
-### Compatibilidad: Universal (Cualquier distribución de Linux o entorno gráfico)
+# Guía de Instalación Rápida - Unbreakable-OS (Versión 3)
 
-Este manual proporciona un procedimiento rápido de 5 pasos para activar la secuencia de arranque dual (**Cold-Boot**) en la impresora **Sovol SV08 MAX** utilizando una tarjeta MicroSD pasiva y una unidad USB principal [source: 5].
-Este manual proporciona el procedimiento directo de 4 pasos para grabar las imágenes y activar el arranque dual en la impresora **Sovol SV08 MAX** utilizando una tarjeta MicroSD (mínimo 1GB) y tu unidad USB principal (llave Netac).
-
-#  ⚠️ NOTA PARA LOS SYSADMINS:                                            #
-#  NO RECOMPILE EL boot.cmd BAJO NINGUNA RAZÓN LÓGICA QUE SE LE OCURRA.   #
-#  SLINGSHOT ES DEPENDIENTE DE LAS DEFINICIONES AQUÍ INCLUIDAS,           #
-#  CAMBIAR ALGO PUEDE PROVOCAR UNA ROTURA DEL SISTEMA.                    #
+¡La **Versión 3** de **Unbreakable-OS** ya está cerrada oficialmente para la comunidad! Hemos optimizado el esquema de almacenamiento en dos componentes independientes para garantizar la máxima velocidad, estabilidad y tolerancia a fallos. Ahora el proceso es un despliegue directo de **"quemar las imágenes y listo"**.
 
 ---
 
+## 💾 Archivos Necesarios para la Descarga
 
-## Paso 1: Grabar la imagen base de Slingshot en la MicroSD
+El sistema operativo se distribuye en dos archivos comprimidos al máximo mediante el algoritmo `xz`:
 
-Debes volcar la imagen de arranque en bruto dentro de una tarjeta MicroSD física (se requiere una capacidad mínima de **1 GB** [source: 5]). Puedes hacerlo de dos maneras:
-
-*   **Método Gráfico (Recomendado para cualquier OS)**: Abre la aplicación **BalenaEtcher**, selecciona el archivo `Slingshot-Boot-Base.img.xz`, elige tu tarjeta MicroSD y presiona **Flash**.
-*   **Método por Terminal (Linux)**: Identifica el nodo de tu tarjeta (ej. `/dev/sdX` o `/dev/mmcblkX`) y ejecuta la tubería de descompresión en crudo [source: 5]:
-    ```bash
-    xzcat Slingshot-Boot-Base.img.xz | sudo dd of=/dev/sdX bs=4M status=progress oflag=sync
-    ```
+1. **`SlingShot-ext4.img.xz`**: Imagen destinada a la tarjeta de memoria (o almacenamiento MMC interno), encargada de la partición de arranque (`/boot`).
+2. **`Unbreakable-OS-ext4.img.xz`**: Imagen del sistema de archivos raíz (`/`), destinada a tu **disco duro o unidad externa**.
 
 ---
 
-## Paso 2: Grabar la imagen del Sistema Operativo en el disco USB
+## 🛠️ Requisitos Previos
 
-Realiza el volcado en crudo del sistema operativo definitivo dentro de tu unidad USB principal (llave Netac de 7.5GB o superior) [source: 5]. Puedes hacerlo de dos maneras:
-
-*   **Método Gráfico**: Abre **BalenaEtcher**, selecciona el archivo `Sovol-SV08-Unbreakable-OS-v2.0.img.xz`, elige tu unidad USB Netac y presiona **Flash**.
-*   **Método por Terminal (Linux)**: Reemplaza `/dev/sdY` con el nombre real de tu dispositivo USB (verifica con cuidado para evitar borrar tu disco duro principal) [source: 5]:
-    ```bash
-    xzcat Sovol-SV08-Unbreakable-OS-v2.0.img.xz | sudo dd of=/dev/sdY bs=4M status=progress oflag=sync
-    ```
+* **Para el arranque**: Una tarjeta de memoria de al menos **8 GB**.
+* **Para el sistema**: Un disco externo o unidad flash de al menos **8 GB** (compatible incluso con unidades de almacenamiento genéricas o de prueba).
+* **Software de flasheo**: Tu herramienta preferida, como **BalenaEtcher**, **Raspberry Pi Imager** o el comando nativo `dd` en Linux.
 
 ---
 
-## Paso 3: Modificar el identificador de tu almacenamiento USB
+## 🚀 Proceso de Instalación (Paso Único)
 
-1. Abre la carpeta principal de la tarjeta MicroSD
-2. Abre el archivo de texto plano llamado **`armbianEnv.txt`** con cualquier editor de text.
-3. Busca la línea que empieza con **`rootdev=`** y reemplaza el valor de fábrica por el identificador único (`UUID` o `PARTUUID`) de la partición del disco USB Netac que acabas de grabar en el Paso 3:
+1. **Flashea el arranque**: Quema la imagen `SlingShot-ext4.img.xz` en tu tarjeta de memoria o almacenamiento interno.
+2. **Flashea el sistema**: Quema la imagen `Unbreakable-OS-ext4.img.xz` en tu disco o unidad externa.
+3. **Conecta los medios**: Introduce la tarjeta de memoria y conecta el disco externo en tu equipo o impresora Sovol.
+4. **Enciende el dispositivo**: El sistema operativo arrancará de forma inmediata. El núcleo auto-corregirá las cabeceras GPT de la tabla de particiones del disco externo en caliente y el entorno quedará 100% operativo.
 
-```text
-# Modifica estrictamente esta línea con el identificador único de tu unidad USB:
-rootdev=UUID=028f2806-d1cd-4aa4-abc4-79e4fe506a9d
-```
-4. Guarda los cambios y cierra el archivo.
+---
+
+## 🧰 Herramientas Integradas de Fábrica
+
+Olvídate de ejecutar scripts externos, descargas pesadas o comandos complejos en la terminal. Al iniciar sesión, tendrás acceso nativo a las herramientas que la comunidad busca:
+
+* **`printer-adm` / `adm`**: Los alias y scripts de administración personalizados para controlar, reiniciar y verificar los servicios del sistema en caliente.
+* **Katapult**: El gestor de arranque definitivo, listo para flashear firmwares de placas directamente por CAN bus o USB sin retirar tarjetas físicas.
+* **KIAUH**: El entorno visual interactivo por excelencia para actualizar, instalar o remover Klipper, Moonraker y tus interfaces web de impresión con un solo clic.
+
+---
+
+## 📝 Notas de Versión
+
+* **Optimización Extext4**: El sistema de archivos raíz ha sido compactado y depurado de forma estricta a los primeros 7-8 GB para garantizar un despliegue seguro, previniendo corrupciones de datos en controladores de disco inestables.
+* **Plug and Play**: Klipper y los servicios de impresión asociados se encuentran pre-configurados para enlazarse de forma automática tras el primer encendido.
