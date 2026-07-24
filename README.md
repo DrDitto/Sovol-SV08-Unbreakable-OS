@@ -79,14 +79,14 @@ La genialidad del diseño de **SlingShot Boot** radica en lo que sucede **despu�
 
 Este proyecto no habría alcanzado esta madurez técnica sin apoyarse en los hombros de gigantes del código y la divulgación de impresión 3D. Un agradecimiento masivo a los siguientes pilares de la comunidad:
 
-### 💻 Repositorios Base:
-*   **[Sovol-SV08-Mainline de Rappetor](https://github.com)**: El mapa de ruta dorado que abrió los ojos a la comunidad para migrar la SV08 hacia el Klipper Mainline y liberarnos del firmware restrictivo de fábrica [source: 0.1.1].
+## 🤝 Agradecimientos Especiales y Créditos
 
-### 📺 Canales de YouTube y Comunidad Esencial:
-*   **[The Next Layer en Español](https://youtube.com)**: Por democratizar la alta escuela de la impresión 3D en nuestro idioma, inspirando optimizaciones brutales y montajes limpios [source: 0.1.2].
-*   **Nadir @ CN3D**: Un agradecimiento muy especial por el soporte técnico incondicional, la lucidez para desarmar problemas de firmware y el empuje constante para hacer crecer la comunidad hispana de modificadores. ¡Buena nota, mae!
-*   **[gerGoPrint3D](https://youtube.com)**: Por meterle el diente a las calibraciones finas, pruebas de estrés y demostraciones crudas de hardware.
-*   **[ModBotArmy](https://youtube.com)**: Por mantener al ejército de modders al día con las mejores mañas mecánicas y de firmware del ecosistema Klipper.
+Este proyecto no habría alcanzado el nivel de robustez de la **Versión 3** sin la inspiración, el soporte técnico y el empuje de grandes referentes de la comunidad de impresión 3D. ¡Vayan a seguir sus canales oficiales!
+
+*   🎥 **[The Next Layer en Español](https://youtube.com)**: Por democratizar la alta escuela de la impresión 3D en nuestro idioma, inspirando optimizaciones brutales y montajes limpios.
+*   🇨🇷 **[Nadir @ CN3D](https://youtube.com)**: Un agradecimiento muy especial por el soporte técnico incondicional, la lucidez para desarmar problemas de firmware y el empuje constante para hacer crecer la comunidad de modificadores. 
+*   ⚙️ **[gerGoPrint3D](https://youtube.com)**: Por meterle el diente a las calibraciones finas, pruebas de estrés y demostraciones crudas de hardware.
+*   🪖 **[ModBotArmy / ModBot](https://youtube.com)**: Por mantener al ejército de modders al día con las mejores mañas mecánicas y de firmware del ecosistema Klipper.
 
 ---
 Diseñado con total rigor de ingeniería bajo el sol de Costa Rica. ¡Pura vida, papá! 🇨🇷🍻
